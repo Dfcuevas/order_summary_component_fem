@@ -18,6 +18,7 @@ body {
     padding: 60px 30px;
     height: 100vh;
     max-width: 375px;
+    margin: auto;
 }
 
 body::before {
@@ -80,6 +81,11 @@ p.summary__paragraph {
 
 .summary__price a {
     font-size: 13px;
+    color: blue;
+}
+
+.summary__price a:hover {
+    text-decoration: none;
 }
 
 .summary__btn {
@@ -95,9 +101,27 @@ p.summary__paragraph {
     margin-bottom: 25px;
 }
 
+.summary__btn:hover {
+    background-color: hsl(245, 84%, 66%);;
+}
+
 a.summary__cancel-order {
     text-decoration: none;
     color: var(--desaturatedBlue);
     font-weight: 900;
     font-size: 14px;
+}
+
+a.summary__cancel-order:hover {
+    color:var(--darkBlue);
+}
+
+@media screen and (min-width: 375px) {
+    body::before {
+        content: url('../images/pattern-background-desktop.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 }
